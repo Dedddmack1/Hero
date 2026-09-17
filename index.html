@@ -513,7 +513,7 @@ nav {
 
   padding-top: 32px;
 
-  max-width: 600px;
+  max-width: 720px;
 }
 
 .hs-item {
@@ -551,13 +551,15 @@ nav {
 
   font-weight: 500;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 
   text-transform: uppercase;
 
   color: rgba(255,255,255,0.4);
 
-  margin-top: 4px;
+  margin-top: 6px;
+
+  line-height: 1.4;
 }
 
 /* ================= TAG STRIP ================= */
@@ -1183,6 +1185,84 @@ nav {
   color: rgba(255,255,255,0.75);
 }
 
+/* ================= CONTACT FORM ================= */
+
+.contact-form {
+  max-width: 680px;
+  margin: 52px auto 0;
+  padding: 34px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(200,150,26,0.2);
+  text-align: left;
+}
+
+.contact-form .form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 2px;
+  background: rgba(255,255,255,0.06);
+  color: var(--white);
+  font-family: var(--fb);
+  font-size: 13px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color .3s var(--ease);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--gold);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form .form-submit {
+  margin-top: 6px;
+}
+
+.form-success-message {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border: 1px solid rgba(201, 164, 92, 0.45);
+  border-radius: 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  background: rgba(201, 164, 92, 0.08);
+}
+
+@media(max-width: 850px) {
+
+  .contact-form {
+    padding: 24px 20px;
+  }
+
+}
+
 /* ================= WHO WE SERVE ================= */
 
 .who-band {
@@ -1413,72 +1493,6 @@ footer {
   color: rgba(255,255,255,0.25);
 }
 
-
-/* ================= CONTACT FORM ================= */
-
-.contact-form {
-  max-width: 680px;
-  margin: 52px auto 0;
-  padding: 34px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(200,150,26,0.2);
-  text-align: left;
-}
-
-.contact-form .form-group {
-  margin-bottom: 18px;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 7px;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 13px 14px;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 2px;
-  background: rgba(255,255,255,0.06);
-  color: var(--white);
-  font-family: var(--fb);
-  font-size: 13px;
-  font-weight: 300;
-  outline: none;
-  transition: border-color .3s var(--ease);
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255,255,255,0.3);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--gold);
-}
-
-.contact-form textarea {
-  min-height: 140px;
-  resize: vertical;
-}
-
-.contact-form .form-submit {
-  margin-top: 6px;
-}
-
-@media(max-width: 850px) {
-  .contact-form {
-    padding: 24px 20px;
-  }
-}
-
 /* ================= MOBILE ================= */
 
 @media(max-width: 850px) {
@@ -1580,18 +1594,6 @@ footer {
 
 }
 
-
-.form-success-message {
-  margin-top: 18px;
-  padding: 14px 18px;
-  border: 1px solid rgba(201, 164, 92, 0.45);
-  border-radius: 8px;
-  font-family: "Outfit", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  background: rgba(201, 164, 92, 0.08);
-}
-
 </style>
 </head>
 
@@ -1658,8 +1660,6 @@ footer {
 
   </ul>
 
-
-  <!-- GET IN TOUCH BUTTON REMOVED -->
 
   <button
     class="menu-toggle"
@@ -1749,11 +1749,11 @@ footer {
       <div class="hs-item">
 
         <div class="hs-num">
-          01
+          500+
         </div>
 
         <div class="hs-label">
-          People
+          Businesses Collaborated With
         </div>
 
       </div>
@@ -1762,11 +1762,11 @@ footer {
       <div class="hs-item">
 
         <div class="hs-num">
-          02
+          275
         </div>
 
         <div class="hs-label">
-          Purpose
+          Companies Served
         </div>
 
       </div>
@@ -1775,11 +1775,11 @@ footer {
       <div class="hs-item">
 
         <div class="hs-num">
-          03
+          1,000+
         </div>
 
         <div class="hs-label">
-          Progress
+          Employees Trained &amp; Developed
         </div>
 
       </div>
@@ -2561,16 +2561,20 @@ footer {
 
 
       <div class="ft-ci">
+
         <span>
           (478) 357-3164
         </span>
+
       </div>
 
 
       <div class="ft-ci">
+
         <span>
           herohrservices@gmail.com
         </span>
+
       </div>
 
     </div>
@@ -2582,12 +2586,17 @@ footer {
   <div class="ft-bottom">
 
     <span class="ft-copy">
+
       © 2026 H.E.R.O. HR SERVICES.
       All rights reserved.
+
     </span>
 
+
     <span class="ft-motto">
+
       Helping Every Role Optimize
+
     </span>
 
   </div>
@@ -3032,7 +3041,9 @@ footer {
 
 
     <span class="ft-motto">
+
       Helping Every Role Optimize
+
     </span>
 
   </div>
@@ -3087,8 +3098,6 @@ footer {
     <div class="ct-details">
 
 
-      <!-- PHONE -->
-
       <div class="ct-di">
 
 
@@ -3130,8 +3139,6 @@ footer {
 
       </div>
 
-
-      <!-- EMAIL -->
 
       <div class="ct-di">
 
@@ -3177,12 +3184,12 @@ footer {
       </div>
 
 
-      <!-- WEBSITE ROW REMOVED -->
-
-
     </div>
 
-    <!-- CONTACT FORM / FORMSPREE -->
+
+    <!-- ==================================================
+         FORMSPREE CONTACT FORM
+    ================================================== -->
 
     <iframe
       name="formspree-hidden-frame"
@@ -3191,12 +3198,14 @@ footer {
       style="display:none;"
     ></iframe>
 
+
     <form
       class="contact-form"
       action="https://formspree.io/f/myezyeyw"
       method="POST"
       target="formspree-hidden-frame"
     >
+
 
       <div class="form-group">
 
@@ -3284,8 +3293,6 @@ footer {
       </div>
 
 
-      <!-- Formspree spam protection -->
-
       <input
         type="text"
         name="_gotcha"
@@ -3294,8 +3301,6 @@ footer {
         style="display:none"
       >
 
-
-      <!-- Email subject received through Formspree -->
 
       <input
         type="hidden"
@@ -3323,8 +3328,14 @@ footer {
         We will get back to you soon.
       </p>
 
+
     </form>
 
+
+    <!-- ==================================================
+         FORMSPREE SUBMISSION SCRIPT
+         Keeps visitor on H.E.R.O. HR SERVICES website
+    ================================================== -->
 
     <script>
 
@@ -3615,7 +3626,7 @@ footer {
 
 
 <!-- ==================================================
-     JAVASCRIPT
+     MAIN JAVASCRIPT
 ================================================== -->
 
 <script>
@@ -3744,4 +3755,4 @@ document.addEventListener(
 
 
 </body>
-  </html>
+</html>
