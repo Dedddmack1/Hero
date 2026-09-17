@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>H.E.R.O. HR SERVICES | Helping Every Role Optimize</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root {
   --gold: #C8961A;
   --gold-lt: #E8B84B;
   --gold-pale: #F5E8C0;
   --navy: #0F1F35;
   --navy-mid: #1B3050;
-  --navy-lt: #243d5e;
+  --navy-lt: #243D5E;
   --cream: #F7F2E8;
   --cream-dk: #EDE5D4;
   --text: #1A1A1A;
   --muted: #666666;
   --white: #FFFFFF;
+
   --fd: 'Cormorant Garamond', serif;
   --fb: 'Outfit', sans-serif;
+
   --ease: cubic-bezier(0.4,0,0.2,1);
 }
 
-*,*::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -51,20 +56,26 @@ button {
   cursor: pointer;
 }
 
-/* NAV */
+/* ================= NAVIGATION ================= */
+
 nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
+
   height: 70px;
   padding: 0 6%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   background: rgba(15,31,53,0.97);
+
   border-bottom: 1px solid rgba(200,150,26,0.2);
+
   backdrop-filter: blur(12px);
 }
 
@@ -79,7 +90,9 @@ nav {
   font-family: var(--fd);
   font-size: 21px;
   font-weight: 700;
+
   color: var(--gold);
+
   letter-spacing: 5px;
   line-height: 1;
 }
@@ -87,8 +100,10 @@ nav {
 .nb-s {
   font-size: 7px;
   font-weight: 500;
+
   letter-spacing: 3px;
   text-transform: uppercase;
+
   color: rgba(255,255,255,0.35);
 }
 
@@ -101,25 +116,35 @@ nav {
 .nl button {
   background: none;
   border: none;
+
   font-family: var(--fb);
   font-size: 11px;
   font-weight: 500;
+
   letter-spacing: 2px;
   text-transform: uppercase;
+
   color: rgba(255,255,255,0.6);
+
   padding-bottom: 4px;
+
   position: relative;
+
   transition: color .3s var(--ease);
 }
 
 .nl button::after {
   content: '';
+
   position: absolute;
   bottom: 0;
   left: 0;
+
   width: 0;
   height: 1px;
+
   background: var(--gold);
+
   transition: width .3s var(--ease);
 }
 
@@ -135,17 +160,24 @@ nav {
 
 .menu-toggle {
   display: none;
+
   background: transparent;
   border: none;
+
   color: var(--gold);
+
   font-size: 24px;
 }
 
-/* PAGE SYSTEM */
+/* ================= PAGE SYSTEM ================= */
+
 .pg {
   display: none;
+
   padding-top: 70px;
+
   min-height: 100vh;
+
   animation: pgIn .4s var(--ease);
 }
 
@@ -154,41 +186,55 @@ nav {
 }
 
 @keyframes pgIn {
+
   from {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
-/* SHARED */
+/* ================= SHARED ================= */
+
 .eb {
   display: flex;
   align-items: center;
   gap: 12px;
+
   font-size: 10px;
   font-weight: 600;
+
   letter-spacing: 4px;
   text-transform: uppercase;
+
   color: var(--gold);
+
   margin-bottom: 14px;
 }
 
 .eb-line {
   width: 26px;
   height: 1px;
+
   background: var(--gold);
+
   flex-shrink: 0;
 }
 
 .sh2 {
   font-family: var(--fd);
+
   font-size: clamp(30px,3vw,44px);
+
   font-weight: 700;
+
   line-height: 1.1;
+
   margin-bottom: 16px;
 }
 
@@ -208,7 +254,9 @@ nav {
 .sp {
   font-size: 15px;
   font-weight: 300;
+
   line-height: 1.85;
+
   color: var(--muted);
 }
 
@@ -238,57 +286,84 @@ nav {
 
 .btn-g {
   background: var(--gold);
+
   color: var(--navy);
+
   border: none;
+
   font-family: var(--fb);
+
   font-size: 11px;
   font-weight: 600;
+
   letter-spacing: 2px;
   text-transform: uppercase;
+
   padding: 14px 28px;
+
   border-radius: 2px;
+
   transition: all .3s var(--ease);
+
   display: inline-block;
 }
 
 .btn-g:hover {
   background: var(--gold-lt);
+
   transform: translateY(-2px);
 }
 
 .btn-o {
   background: transparent;
+
   color: rgba(255,255,255,0.8);
+
   border: 1px solid rgba(255,255,255,0.2);
+
   font-family: var(--fb);
+
   font-size: 11px;
   font-weight: 500;
+
   letter-spacing: 2px;
   text-transform: uppercase;
+
   padding: 13px 28px;
+
   border-radius: 2px;
+
   transition: all .3s var(--ease);
+
   display: inline-block;
 }
 
 .btn-o:hover {
   border-color: var(--gold);
+
   color: var(--gold);
 }
 
 .divider {
   width: 48px;
   height: 2px;
+
   background: var(--gold);
+
   margin: 0 0 28px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero {
   min-height: calc(100vh - 70px);
+
   background: var(--navy);
+
   position: relative;
+
   overflow: hidden;
+
   display: flex;
   align-items: center;
 }
@@ -296,7 +371,9 @@ nav {
 .hero-bg {
   position: absolute;
   inset: 0;
+
   opacity: 0.035;
+
   background-image:
     repeating-linear-gradient(
       0deg,
@@ -316,51 +393,71 @@ nav {
 
 .hero-glow {
   position: absolute;
+
   bottom: -200px;
   right: -100px;
+
   width: 700px;
   height: 700px;
+
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(200,150,26,0.07) 0%,
-    transparent 70%
-  );
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(200,150,26,0.07) 0%,
+      transparent 70%
+    );
+
   pointer-events: none;
 }
 
 .hero-inner {
   position: relative;
   z-index: 2;
+
   padding: 80px 10%;
+
   max-width: 900px;
 }
 
 .hero-tag {
   display: inline-flex;
   align-items: center;
+
   gap: 10px;
+
   font-size: 10px;
   font-weight: 600;
+
   letter-spacing: 4px;
   text-transform: uppercase;
+
   color: var(--gold);
+
   margin-bottom: 32px;
 }
 
 .hero-tag span {
   display: block;
+
   width: 24px;
   height: 1px;
+
   background: var(--gold);
 }
 
 .hero-h1 {
   font-family: var(--fd);
+
   font-size: clamp(52px, 6vw, 84px);
+
   font-weight: 700;
+
   color: var(--white);
+
   line-height: 1;
+
   margin-bottom: 10px;
 }
 
@@ -371,84 +468,125 @@ nav {
 
 .hero-sub {
   font-family: var(--fd);
+
   font-size: clamp(18px, 2vw, 24px);
+
   font-style: italic;
   font-weight: 400;
+
   color: rgba(255,255,255,0.45);
+
   margin-bottom: 32px;
+
   line-height: 1.4;
 }
 
 .hero-desc {
   font-size: 16px;
   font-weight: 300;
+
   line-height: 1.9;
+
   color: rgba(255,255,255,0.65);
+
   max-width: 560px;
+
   margin-bottom: 48px;
 }
 
 .hero-btns {
   display: flex;
+
   gap: 14px;
+
   flex-wrap: wrap;
+
   margin-bottom: 64px;
 }
 
 .hero-strip {
   display: flex;
+
   gap: 0;
+
   border-top: 1px solid rgba(200,150,26,0.2);
+
   padding-top: 32px;
+
   max-width: 600px;
 }
 
 .hs-item {
   flex: 1;
+
   padding-right: 28px;
+
   margin-right: 28px;
+
   border-right: 1px solid rgba(200,150,26,0.2);
 }
 
 .hs-item:last-child {
   border-right: none;
+
   padding-right: 0;
+
   margin-right: 0;
 }
 
 .hs-num {
   font-family: var(--fd);
+
   font-size: 32px;
+
   font-weight: 700;
+
   color: var(--gold);
+
   line-height: 1;
 }
 
 .hs-label {
   font-size: 10px;
+
   font-weight: 500;
+
   letter-spacing: 2px;
+
   text-transform: uppercase;
+
   color: rgba(255,255,255,0.4);
+
   margin-top: 4px;
 }
 
-/* TAG STRIP */
+/* ================= TAG STRIP ================= */
+
 .tagstrip {
   background: rgba(200,150,26,0.07);
+
   border-top: 1px solid rgba(200,150,26,0.2);
+
   display: flex;
 }
 
 .ts-item {
   flex: 1;
+
   padding: 14px 0;
+
   text-align: center;
+
   font-size: 9px;
+
   font-weight: 600;
+
   letter-spacing: 3px;
+
   text-transform: uppercase;
+
   color: var(--gold);
+
   border-right: 1px solid rgba(200,150,26,0.15);
 }
 
@@ -456,132 +594,194 @@ nav {
   border-right: none;
 }
 
-/* MISSION */
+/* ================= MISSION ================= */
+
 .mission-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 72px;
+
   align-items: center;
 }
 
 .quote-card {
   background: var(--navy-mid);
+
   border-left: 3px solid var(--gold);
+
   padding: 44px 40px;
+
   border-radius: 2px;
 }
 
 .qm {
   font-family: var(--fd);
+
   font-size: 72px;
+
   color: var(--gold);
+
   line-height: 0.5;
+
   margin-bottom: 20px;
+
   opacity: 0.4;
 }
 
 .qt {
   font-family: var(--fd);
+
   font-size: 20px;
+
   font-style: italic;
+
   color: var(--white);
+
   line-height: 1.7;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
+
 .srv-grid {
   display: grid;
+
   grid-template-columns: repeat(3,1fr);
+
   gap: 2px;
+
   margin-top: 52px;
 }
 
 .srv-card {
   background: var(--cream-dk);
+
   padding: 38px 28px;
+
   border-top: 3px solid transparent;
+
   transition: all .3s var(--ease);
 }
 
 .srv-card:hover {
   background: var(--white);
+
   border-top-color: var(--gold);
+
   transform: translateY(-4px);
+
   box-shadow: 0 8px 32px rgba(0,0,0,0.08);
 }
 
 .srv-ico {
   width: 42px;
   height: 42px;
+
   border-radius: 50%;
+
   background: var(--navy);
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   margin-bottom: 18px;
 }
 
 .srv-ico svg {
   width: 18px;
   height: 18px;
+
   stroke: var(--gold);
+
   stroke-width: 1.5;
+
   fill: none;
+
   stroke-linecap: round;
+
   stroke-linejoin: round;
 }
 
 .srv-t {
   font-family: var(--fd);
+
   font-size: 19px;
+
   font-weight: 600;
+
   color: var(--navy);
+
   margin-bottom: 8px;
 }
 
 .srv-d {
   font-size: 13px;
+
   font-weight: 300;
+
   line-height: 1.75;
+
   color: var(--muted);
 }
 
-/* CTA */
+/* ================= CTA ================= */
+
 .cta-band {
   background: var(--navy);
+
   padding: 72px 8%;
+
   display: grid;
+
   grid-template-columns: 1fr auto;
+
   gap: 40px;
+
   align-items: center;
+
   border-top: 1px solid rgba(200,150,26,0.15);
 }
 
 .cta-h {
   font-family: var(--fd);
+
   font-size: clamp(24px,2.5vw,36px);
+
   font-weight: 700;
+
   color: var(--white);
+
   line-height: 1.2;
 }
 
 .cta-h em {
   color: var(--gold);
+
   font-style: italic;
 }
 
 .cta-sub {
   font-size: 14px;
+
   font-weight: 300;
+
   color: rgba(255,255,255,0.5);
+
   margin-top: 10px;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
+
 .about-banner {
   background: var(--navy);
+
   padding: 80px 10%;
+
   text-align: center;
+
   border-bottom: 1px solid rgba(200,150,26,0.15);
 }
 
@@ -591,55 +791,77 @@ nav {
 
 .about-banner .sh2 {
   max-width: 640px;
+
   margin: 0 auto 18px;
 }
 
 .about-banner .sp {
   max-width: 580px;
+
   margin: 0 auto 52px;
 }
 
 .ab-pillars {
   display: grid;
+
   grid-template-columns: repeat(3,1fr);
+
   gap: 2px;
+
   max-width: 860px;
+
   margin: 0 auto;
 }
 
 .ab-pill {
   background: var(--navy-mid);
+
   padding: 36px 28px;
+
   border-top: 3px solid var(--gold);
+
   text-align: left;
 }
 
 .ab-pill-h {
   font-family: var(--fd);
+
   font-size: 22px;
+
   font-weight: 700;
+
   color: var(--gold);
+
   margin-bottom: 10px;
 }
 
 .ab-pill-p {
   font-size: 13px;
+
   font-weight: 300;
+
   line-height: 1.75;
+
   color: rgba(255,255,255,0.6);
 }
 
 .acronym-band {
   display: grid;
+
   grid-template-columns: repeat(4,1fr);
+
   gap: 2px;
+
   background: var(--cream-dk);
 }
 
 .ac-card {
   background: var(--cream);
+
   padding: 48px 28px;
+
   border-top: 3px solid transparent;
+
   transition: border-color .3s;
 }
 
@@ -649,32 +871,47 @@ nav {
 
 .ac-l {
   font-family: var(--fd);
+
   font-size: 68px;
+
   font-weight: 700;
+
   color: var(--gold);
+
   line-height: 1;
+
   margin-bottom: 10px;
 }
 
 .ac-w {
   font-size: 12px;
+
   font-weight: 600;
+
   letter-spacing: 2px;
+
   text-transform: uppercase;
+
   color: var(--navy);
+
   margin-bottom: 10px;
 }
 
 .ac-p {
   font-size: 13px;
+
   font-weight: 300;
+
   line-height: 1.7;
+
   color: var(--muted);
 }
 
-/* SERVICES PAGE */
+/* ================= SERVICES PAGE ================= */
+
 .svc-head {
   background: var(--navy);
+
   padding: 80px 10%;
 }
 
@@ -684,270 +921,275 @@ nav {
 
 .svc-list {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 2px;
+
   background: var(--cream-dk);
 }
 
 .svc-item {
   background: var(--cream);
+
   padding: 42px 36px;
+
   border-left: 3px solid transparent;
+
   transition: all .3s;
 }
 
 .svc-item:hover {
   border-left-color: var(--gold);
+
   background: var(--white);
 }
 
 .svc-num {
   font-family: var(--fd);
+
   font-size: 48px;
+
   font-weight: 700;
+
   color: var(--gold);
+
   line-height: 1;
+
   margin-bottom: 14px;
 }
 
 .svc-title {
   font-family: var(--fd);
+
   font-size: 25px;
+
   font-weight: 700;
+
   color: var(--navy);
+
   margin-bottom: 10px;
 }
 
 .svc-desc {
   font-size: 14px;
+
   font-weight: 300;
+
   line-height: 1.8;
+
   color: var(--muted);
 }
 
-/* WHY */
+/* ================= WHY ================= */
+
 .why-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 80px;
+
   align-items: center;
 }
 
 .why-list {
   display: flex;
+
   flex-direction: column;
+
   gap: 22px;
 }
 
 .why-row {
   display: flex;
+
   gap: 16px;
+
   align-items: flex-start;
 }
 
 .why-chk {
   width: 26px;
   height: 26px;
+
   border: 1px solid var(--gold);
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   flex-shrink: 0;
 }
 
 .why-chk svg {
   width: 14px;
   height: 14px;
+
   stroke: var(--gold);
+
   fill: none;
+
   stroke-width: 2;
 }
 
 .why-txt {
   font-size: 14px;
+
   font-weight: 300;
+
   line-height: 1.7;
+
   color: var(--muted);
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .ct-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   min-height: calc(100vh - 70px);
+
+  background: var(--navy);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
 .ct-left {
-  background: var(--navy);
-  padding: 90px 10%;
+  width: 100%;
+
+  max-width: 900px;
+
+  padding: 100px 10%;
+
+  text-align: center;
 }
 
 .ct-left .eb {
+  justify-content: center;
+
   margin-bottom: 24px;
 }
 
 .ct-h {
   font-family: var(--fd);
+
   font-size: clamp(44px,5vw,68px);
+
   font-weight: 700;
+
   line-height: 1;
+
   color: var(--white);
+
   margin-bottom: 24px;
 }
 
 .ct-h em {
   color: var(--gold);
+
+  font-style: italic;
 }
 
 .ct-p {
   font-size: 15px;
+
   font-weight: 300;
+
   line-height: 1.85;
+
   color: rgba(255,255,255,0.6);
-  max-width: 500px;
+
+  max-width: 600px;
+
+  margin: 0 auto;
 }
 
 .ct-details {
-  margin-top: 48px;
+  margin-top: 52px;
+
   display: flex;
+
   flex-direction: column;
+
+  align-items: center;
+
   gap: 24px;
 }
 
 .ct-di {
   display: flex;
+
   align-items: center;
+
   gap: 16px;
+
+  min-width: 280px;
+
+  text-align: left;
 }
 
 .ct-icon {
   width: 42px;
   height: 42px;
+
   border: 1px solid rgba(200,150,26,0.35);
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
+  flex-shrink: 0;
 }
 
 .ct-icon svg {
   width: 18px;
   height: 18px;
+
   stroke: var(--gold);
+
   fill: none;
+
   stroke-width: 1.5;
+
   stroke-linecap: round;
+
   stroke-linejoin: round;
 }
 
 .ct-dl {
   font-size: 9px;
+
   font-weight: 600;
+
   letter-spacing: 2px;
+
   text-transform: uppercase;
+
   color: rgba(255,255,255,0.35);
+
   margin-bottom: 3px;
 }
 
 .ct-dv {
   font-size: 14px;
+
   font-weight: 300;
+
   color: rgba(255,255,255,0.75);
 }
 
-.ct-form-wrap {
-  background: var(--cream);
-  padding: 90px 10%;
-}
-
-.ct-form-h {
-  font-family: var(--fd);
-  font-size: 34px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 30px;
-}
-
-.fg {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.fi {
-  display: flex;
-  flex-direction: column;
-}
-
-.fi.full {
-  grid-column: 1 / -1;
-}
-
-.fl {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--navy);
-  margin-bottom: 7px;
-}
-
-.finput,
-.fsel,
-.ftxt {
-  width: 100%;
-  border: 1px solid var(--cream-dk);
-  background: var(--white);
-  font-family: var(--fb);
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--text);
-  padding: 13px 14px;
-  outline: none;
-  transition: border-color .3s;
-}
-
-.finput:focus,
-.fsel:focus,
-.ftxt:focus {
-  border-color: var(--gold);
-}
-
-.ftxt {
-  min-height: 130px;
-  resize: vertical;
-}
-
-.fsub {
-  margin-top: 24px;
-  width: 100%;
-  background: var(--gold);
-  color: var(--navy);
-  border: none;
-  font-family: var(--fb);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 15px 20px;
-  transition: background .3s;
-}
-
-.fsub:hover {
-  background: var(--gold-lt);
-}
-
-.f-ok {
-  display: none;
-  text-align: center;
-  padding: 40px 20px;
-  font-family: var(--fd);
-  font-size: 28px;
-  color: var(--navy);
-}
+/* ================= WHO WE SERVE ================= */
 
 .who-band {
   background: var(--cream);
+
   padding: 90px 8%;
+
   text-align: center;
 }
 
@@ -961,21 +1203,29 @@ nav {
 
 .who-band .sp {
   max-width: 600px;
+
   margin: 0 auto;
 }
 
 .who-grid {
   display: grid;
+
   grid-template-columns: repeat(5,1fr);
+
   gap: 2px;
+
   margin-top: 48px;
+
   background: var(--cream-dk);
 }
 
 .who-card {
   background: var(--white);
+
   padding: 34px 20px;
+
   border-top: 3px solid transparent;
+
   transition: border-color .3s;
 }
 
@@ -985,82 +1235,123 @@ nav {
 
 .who-code {
   font-family: var(--fd);
+
   font-size: 38px;
+
   font-weight: 700;
+
   color: var(--gold);
+
   margin-bottom: 8px;
 }
 
 .who-lbl {
   font-size: 10px;
+
   font-weight: 600;
+
   letter-spacing: 1.5px;
+
   text-transform: uppercase;
+
   color: var(--navy);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
   background: #0A1728;
+
   padding: 60px 8% 30px;
+
   color: var(--white);
 }
 
 .ft-grid {
   display: grid;
+
   grid-template-columns: 1.5fr 1fr 1fr;
+
   gap: 60px;
+
   padding-bottom: 50px;
+
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .ft-brand-h {
   font-family: var(--fd);
+
   font-size: 32px;
+
   font-weight: 700;
+
   color: var(--gold);
+
   letter-spacing: 5px;
 }
 
 .ft-brand-s {
   font-size: 8px;
+
   letter-spacing: 3px;
+
   text-transform: uppercase;
+
   color: rgba(255,255,255,0.35);
+
   margin-top: 2px;
 }
 
 .ft-tagline {
   font-family: var(--fd);
+
   font-size: 17px;
+
   font-style: italic;
+
   color: rgba(255,255,255,0.45);
+
   margin-top: 18px;
 }
 
 .ft-col-h {
   font-size: 9px;
+
   font-weight: 600;
+
   letter-spacing: 3px;
+
   text-transform: uppercase;
+
   color: var(--gold);
+
   margin-bottom: 18px;
 }
 
 .ft-links {
   display: flex;
+
   flex-direction: column;
+
   gap: 10px;
 }
 
 .ft-links button {
   background: none;
+
   border: none;
+
   color: rgba(255,255,255,0.5);
+
   font-family: var(--fb);
+
   font-size: 12px;
+
   text-align: left;
+
   padding: 0;
+
   transition: color .3s;
 }
 
@@ -1070,43 +1361,60 @@ footer {
 
 .ft-ci {
   display: flex;
+
   align-items: center;
+
   gap: 10px;
+
   margin-bottom: 13px;
 }
 
 .ft-ci svg {
   width: 16px;
   height: 16px;
+
   stroke: var(--gold);
+
   fill: none;
+
   stroke-width: 1.5;
+
   stroke-linecap: round;
+
   stroke-linejoin: round;
+
   flex-shrink: 0;
 }
 
 .ft-ci span {
   font-size: 12px;
+
   font-weight: 300;
+
   color: rgba(255,255,255,0.5);
 }
 
 .ft-bottom {
   display: flex;
+
   justify-content: space-between;
+
   gap: 20px;
+
   padding-top: 24px;
 }
 
 .ft-copy,
 .ft-motto {
   font-size: 9px;
+
   letter-spacing: 1px;
+
   color: rgba(255,255,255,0.25);
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
+
 @media(max-width: 850px) {
 
   nav {
@@ -1115,14 +1423,22 @@ footer {
 
   .nl {
     display: none;
+
     position: absolute;
+
     top: 70px;
+
     left: 0;
     right: 0;
+
     background: var(--navy);
+
     flex-direction: column;
+
     gap: 0;
+
     padding: 20px 5%;
+
     border-bottom: 1px solid rgba(200,150,26,0.2);
   }
 
@@ -1139,8 +1455,7 @@ footer {
   }
 
   .mission-grid,
-  .why-grid,
-  .ct-top {
+  .why-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1165,21 +1480,13 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .fg {
-    grid-template-columns: 1fr;
-  }
-
-  .fi.full {
-    grid-column: auto;
-  }
-
-  .ct-left,
-  .ct-form-wrap {
+  .ct-left {
     padding: 70px 8%;
   }
 
   .ft-grid {
     grid-template-columns: 1fr;
+
     gap: 35px;
   }
 
@@ -1201,118 +1508,205 @@ footer {
 
   .hs-item {
     min-width: 120px;
+
     margin-bottom: 20px;
   }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- ==================================================
+     NAVIGATION
+================================================== -->
+
 <nav>
 
   <div class="nb" onclick="go('home')">
-    <div class="nb-h">H.E.R.O.</div>
-    <div class="nb-s">Helping Every Role Optimize</div>
+
+    <div class="nb-h">
+      H.E.R.O.
+    </div>
+
+    <div class="nb-s">
+      Helping Every Role Optimize
+    </div>
+
   </div>
+
 
   <ul class="nl">
 
     <li>
-      <button onclick="go('home')" id="n-home" class="active">
+      <button
+        onclick="go('home')"
+        id="n-home"
+        class="active"
+      >
         Home
       </button>
     </li>
 
     <li>
-      <button onclick="go('about')" id="n-about">
+      <button
+        onclick="go('about')"
+        id="n-about"
+      >
         About
       </button>
     </li>
 
     <li>
-      <button onclick="go('services')" id="n-services">
+      <button
+        onclick="go('services')"
+        id="n-services"
+      >
         Services
       </button>
     </li>
 
     <li>
-      <button onclick="go('contact')" id="n-contact">
+      <button
+        onclick="go('contact')"
+        id="n-contact"
+      >
         Contact
       </button>
     </li>
 
   </ul>
 
+
   <!-- GET IN TOUCH BUTTON REMOVED -->
 
-  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation">
+  <button
+    class="menu-toggle"
+    onclick="toggleMenu()"
+    aria-label="Open navigation"
+  >
     ☰
   </button>
 
 </nav>
 
 
-<!-- ================= HOME ================= -->
+<!-- ==================================================
+     HOME
+================================================== -->
 
 <div id="pg-home" class="pg on">
+
 
 <section class="hero">
 
   <div class="hero-bg"></div>
+
   <div class="hero-glow"></div>
+
 
   <div class="hero-inner">
 
+
     <div class="hero-tag">
+
       <span></span>
+
       H.E.R.O. HR SERVICES
+
     </div>
+
 
     <h1 class="hero-h1">
+
       Helping Every<br>
+
       <em>Role Optimize.</em>
+
     </h1>
 
+
     <div class="hero-sub">
+
       Where people and purpose align.
+
     </div>
 
+
     <p class="hero-desc">
+
       H.E.R.O. HR SERVICES partners with organizations to develop
       stronger leaders, healthier cultures, and more effective teams.
       We turn people challenges into organizational opportunities.
+
     </p>
+
 
     <div class="hero-btns">
 
-      <button class="btn-g" onclick="go('contact')">
+      <button
+        class="btn-g"
+        onclick="go('contact')"
+      >
         Start a Conversation
       </button>
 
-      <button class="btn-o" onclick="go('services')">
+
+      <button
+        class="btn-o"
+        onclick="go('services')"
+      >
         Explore Services
       </button>
 
     </div>
 
+
     <div class="hero-strip">
 
-      <div class="hs-item">
-        <div class="hs-num">01</div>
-        <div class="hs-label">People</div>
-      </div>
 
       <div class="hs-item">
-        <div class="hs-num">02</div>
-        <div class="hs-label">Purpose</div>
+
+        <div class="hs-num">
+          01
+        </div>
+
+        <div class="hs-label">
+          People
+        </div>
+
       </div>
 
+
       <div class="hs-item">
-        <div class="hs-num">03</div>
-        <div class="hs-label">Progress</div>
+
+        <div class="hs-num">
+          02
+        </div>
+
+        <div class="hs-label">
+          Purpose
+        </div>
+
       </div>
+
+
+      <div class="hs-item">
+
+        <div class="hs-num">
+          03
+        </div>
+
+        <div class="hs-label">
+          Progress
+        </div>
+
+      </div>
+
 
     </div>
 
@@ -1323,51 +1717,81 @@ footer {
 
 <div class="tagstrip">
 
-  <div class="ts-item">People</div>
-  <div class="ts-item">Purpose</div>
-  <div class="ts-item">Progress</div>
-  <div class="ts-item">Performance</div>
+  <div class="ts-item">
+    People
+  </div>
+
+  <div class="ts-item">
+    Purpose
+  </div>
+
+  <div class="ts-item">
+    Progress
+  </div>
+
+  <div class="ts-item">
+    Performance
+  </div>
 
 </div>
 
 
 <section class="sec sec-cr">
 
+
   <div class="mission-grid">
+
 
     <div>
 
       <div class="eb">
+
         <span class="eb-line"></span>
+
         Our Mission
+
       </div>
 
+
       <h2 class="sh2 sh2-dk">
+
         People are the<br>
+
         <em>heart of every organization.</em>
+
       </h2>
+
 
       <div class="divider"></div>
 
+
       <p class="sp">
+
         At H.E.R.O. HR SERVICES, we believe organizational success
         starts with people. Our work helps organizations create
         environments where individuals can perform, leaders can lead,
         and teams can thrive.
+
       </p>
 
     </div>
 
+
     <div class="quote-card">
 
-      <div class="qm">“</div>
+      <div class="qm">
+        “
+      </div>
 
       <div class="qt">
+
         We help organizations transform the way people work,
         lead, collaborate, and grow.
+
       </div>
 
     </div>
+
 
   </div>
 
@@ -1376,34 +1800,57 @@ footer {
 
 <section class="sec sec-dk">
 
+
   <div class="eb">
+
     <span class="eb-line"></span>
+
     What We Do
+
   </div>
 
+
   <h2 class="sh2 sh2-lt">
+
     Solutions designed for<br>
+
     <em>real organizational challenges.</em>
+
   </h2>
 
+
   <div class="srv-grid">
+
 
     <div class="srv-card">
 
       <div class="srv-ico">
+
         <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="7" r="4"/>
+
+          <circle
+            cx="12"
+            cy="7"
+            r="4"
+          />
+
           <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
+
         </svg>
+
       </div>
+
 
       <div class="srv-t">
         Organizational Development
       </div>
 
+
       <div class="srv-d">
+
         Build organizational structures, systems, and strategies
         that support sustainable growth.
+
       </div>
 
     </div>
@@ -1412,20 +1859,30 @@ footer {
     <div class="srv-card">
 
       <div class="srv-ico">
+
         <svg viewBox="0 0 24 24">
+
           <path d="M12 20V10"/>
+
           <path d="M18 20V4"/>
+
           <path d="M6 20v-6"/>
+
         </svg>
+
       </div>
+
 
       <div class="srv-t">
         Leadership Development
       </div>
 
+
       <div class="srv-d">
+
         Develop confident, capable leaders who can guide teams
         and drive organizational performance.
+
       </div>
 
     </div>
@@ -1434,23 +1891,42 @@ footer {
     <div class="srv-card">
 
       <div class="srv-ico">
+
         <svg viewBox="0 0 24 24">
-          <circle cx="9" cy="7" r="4"/>
-          <circle cx="17" cy="9" r="3"/>
+
+          <circle
+            cx="9"
+            cy="7"
+            r="4"
+          />
+
+          <circle
+            cx="17"
+            cy="9"
+            r="3"
+          />
+
           <path d="M2 21v-2a7 7 0 0 1 14 0v2"/>
+
         </svg>
+
       </div>
+
 
       <div class="srv-t">
         Team Effectiveness
       </div>
 
+
       <div class="srv-d">
+
         Strengthen collaboration, communication, accountability,
         and team performance.
+
       </div>
 
     </div>
+
 
   </div>
 
@@ -1459,29 +1935,43 @@ footer {
 
 <div class="cta-band">
 
+
   <div>
 
     <h2 class="cta-h">
+
       Ready to move your organization<br>
+
       <em>forward?</em>
+
     </h2>
 
+
     <p class="cta-sub">
+
       Let's build what's next together.
+
     </p>
 
   </div>
 
-  <button class="btn-g" onclick="go('contact')">
+
+  <button
+    class="btn-g"
+    onclick="go('contact')"
+  >
     Let's Build What's Next
   </button>
+
 
 </div>
 
 
 <footer>
 
+
   <div class="ft-grid">
+
 
     <div>
 
@@ -1506,12 +1996,24 @@ footer {
         Navigate
       </div>
 
+
       <div class="ft-links">
 
-        <button onclick="go('home')">Home</button>
-        <button onclick="go('about')">About</button>
-        <button onclick="go('services')">Services</button>
-        <button onclick="go('contact')">Contact</button>
+        <button onclick="go('home')">
+          Home
+        </button>
+
+        <button onclick="go('about')">
+          About
+        </button>
+
+        <button onclick="go('services')">
+          Services
+        </button>
+
+        <button onclick="go('contact')">
+          Contact
+        </button>
 
       </div>
 
@@ -1524,42 +2026,26 @@ footer {
         Contact
       </div>
 
+
       <div class="ft-ci">
 
-        <svg viewBox="0 0 24 24">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2
-          19.79 19.79 0 0 1-8.63-3.07
-          A19.5 19.5 0 0 1 4.69 12
-          19.79 19.79 0 0 1 1.58 3.44
-          2 2 0 0 1 3.55 1.25h3a2 2
-          0 0 1 2 1.72c.127.96.361
-          1.903.7 2.81a2 2 0 0 1-.45
-          2.11L7.91 8.81a16 16 0 0 0
-          6.29 6.29l.87-.87a2 2 0 0
-          1 2.11-.45c.907.339 1.85.573
-          2.81.7A2 2 0 0 1 21.73 16.92z"/>
-        </svg>
-
-        <span>(478) 357-3164</span>
+        <span>
+          (478) 357-3164
+        </span>
 
       </div>
 
 
       <div class="ft-ci">
 
-        <svg viewBox="0 0 24 24">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12
-          c0 1.1-.9 2-2 2H4c-1.1
-          0-2-.9-2-2V6c0-1.1.9-2
-          2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
-        </svg>
-
-        <span>herohrservices@gmail.com</span>
+        <span>
+          herohrservices@gmail.com
+        </span>
 
       </div>
 
     </div>
+
 
   </div>
 
@@ -1567,45 +2053,68 @@ footer {
   <div class="ft-bottom">
 
     <span class="ft-copy">
-      © 2026 H.E.R.O. HR SERVICES. All rights reserved.
+
+      © 2026 H.E.R.O. HR SERVICES.
+      All rights reserved.
+
     </span>
 
+
     <span class="ft-motto">
+
       Helping Every Role Optimize
+
     </span>
 
   </div>
+
 
 </footer>
 
 </div>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ==================================================
+     ABOUT
+================================================== -->
 
 <div id="pg-about" class="pg">
 
+
 <section class="about-banner">
 
+
   <div class="eb">
+
     <span class="eb-line"></span>
+
     About H.E.R.O.
+
     <span class="eb-line"></span>
+
   </div>
 
+
   <h2 class="sh2 sh2-lt">
+
     Helping organizations<br>
+
     <em>become their best.</em>
+
   </h2>
 
+
   <p class="sp sp-lt">
+
     H.E.R.O. HR SERVICES is an organizational development
     consulting firm focused on helping people and organizations
     reach their full potential.
+
   </p>
 
 
   <div class="ab-pillars">
+
 
     <div class="ab-pill">
 
@@ -1614,8 +2123,10 @@ footer {
       </div>
 
       <div class="ab-pill-p">
+
         We believe people are the foundation of every successful
         organization.
+
       </div>
 
     </div>
@@ -1628,8 +2139,10 @@ footer {
       </div>
 
       <div class="ab-pill-p">
+
         We connect people strategy with organizational purpose
         and measurable outcomes.
+
       </div>
 
     </div>
@@ -1642,11 +2155,14 @@ footer {
       </div>
 
       <div class="ab-pill-p">
+
         We turn ideas into practical strategies that create
         meaningful progress.
+
       </div>
 
     </div>
+
 
   </div>
 
@@ -1655,17 +2171,22 @@ footer {
 
 <div class="acronym-band">
 
+
   <div class="ac-card">
 
-    <div class="ac-l">H</div>
+    <div class="ac-l">
+      H
+    </div>
 
     <div class="ac-w">
       Helping
     </div>
 
     <div class="ac-p">
+
       Supporting people and organizations through meaningful
       development and change.
+
     </div>
 
   </div>
@@ -1673,15 +2194,19 @@ footer {
 
   <div class="ac-card">
 
-    <div class="ac-l">E</div>
+    <div class="ac-l">
+      E
+    </div>
 
     <div class="ac-w">
       Every
     </div>
 
     <div class="ac-p">
+
       Recognizing the unique value every individual brings
       to an organization.
+
     </div>
 
   </div>
@@ -1689,15 +2214,19 @@ footer {
 
   <div class="ac-card">
 
-    <div class="ac-l">R</div>
+    <div class="ac-l">
+      R
+    </div>
 
     <div class="ac-w">
       Role
     </div>
 
     <div class="ac-p">
+
       Helping people understand and maximize their impact
       within their role.
+
     </div>
 
   </div>
@@ -1705,42 +2234,59 @@ footer {
 
   <div class="ac-card">
 
-    <div class="ac-l">O</div>
+    <div class="ac-l">
+      O
+    </div>
 
     <div class="ac-w">
       Optimize
     </div>
 
     <div class="ac-p">
+
       Creating conditions that allow people, teams, and
       organizations to perform at their best.
+
     </div>
 
   </div>
+
 
 </div>
 
 
 <section class="sec sec-cr">
 
+
   <div class="why-grid">
+
 
     <div>
 
       <div class="eb">
+
         <span class="eb-line"></span>
+
         Our Approach
+
       </div>
 
+
       <h2 class="sh2 sh2-dk">
+
         Practical strategy.<br>
+
         <em>Meaningful results.</em>
+
       </h2>
 
+
       <p class="sp">
+
         We combine organizational development expertise with
         practical, people-centered strategies designed to create
         sustainable organizational improvement.
+
       </p>
 
     </div>
@@ -1748,17 +2294,24 @@ footer {
 
     <div class="why-list">
 
+
       <div class="why-row">
 
         <div class="why-chk">
+
           <svg viewBox="0 0 24 24">
+
             <polyline points="20 6 9 17 4 12"/>
+
           </svg>
+
         </div>
 
         <p class="why-txt">
+
           Strategic, practical, and fully tailored solutions —
           no cookie-cutter playbooks.
+
         </p>
 
       </div>
@@ -1767,14 +2320,20 @@ footer {
       <div class="why-row">
 
         <div class="why-chk">
+
           <svg viewBox="0 0 24 24">
+
             <polyline points="20 6 9 17 4 12"/>
+
           </svg>
+
         </div>
 
         <p class="why-txt">
+
           Collaborative approach that builds internal capability —
           your team owns the outcome.
+
         </p>
 
       </div>
@@ -1783,14 +2342,20 @@ footer {
       <div class="why-row">
 
         <div class="why-chk">
+
           <svg viewBox="0 0 24 24">
+
             <polyline points="20 6 9 17 4 12"/>
+
           </svg>
+
         </div>
 
         <p class="why-txt">
+
           Measurable impact through clear goals, progress tracking,
           and honest reporting.
+
         </p>
 
       </div>
@@ -1799,17 +2364,24 @@ footer {
       <div class="why-row">
 
         <div class="why-chk">
+
           <svg viewBox="0 0 24 24">
+
             <polyline points="20 6 9 17 4 12"/>
+
           </svg>
+
         </div>
 
         <p class="why-txt">
+
           Deeply passionate about people, purpose, and progress
           at every level.
+
         </p>
 
       </div>
+
 
     </div>
 
@@ -1820,22 +2392,34 @@ footer {
 
 <div class="cta-band">
 
+
   <div>
 
     <h2 class="cta-h">
+
       Not sure where to start?<br>
+
       <em>Let's figure it out together.</em>
+
     </h2>
 
+
     <p class="cta-sub">
+
       Every engagement begins with a conversation.
+
     </p>
 
   </div>
 
-  <button class="btn-g" onclick="go('contact')">
+
+  <button
+    class="btn-g"
+    onclick="go('contact')"
+  >
     Schedule a Consultation
   </button>
+
 
 </div>
 
@@ -1843,6 +2427,7 @@ footer {
 <footer>
 
   <div class="ft-grid">
+
 
     <div>
 
@@ -1867,11 +2452,25 @@ footer {
         Navigate
       </div>
 
+
       <div class="ft-links">
-        <button onclick="go('home')">Home</button>
-        <button onclick="go('about')">About</button>
-        <button onclick="go('services')">Services</button>
-        <button onclick="go('contact')">Contact</button>
+
+        <button onclick="go('home')">
+          Home
+        </button>
+
+        <button onclick="go('about')">
+          About
+        </button>
+
+        <button onclick="go('services')">
+          Services
+        </button>
+
+        <button onclick="go('contact')">
+          Contact
+        </button>
+
       </div>
 
     </div>
@@ -1883,15 +2482,22 @@ footer {
         Contact
       </div>
 
-      <div class="ft-ci">
-        <span>(478) 357-3164</span>
-      </div>
 
       <div class="ft-ci">
-        <span>herohrservices@gmail.com</span>
+        <span>
+          (478) 357-3164
+        </span>
+      </div>
+
+
+      <div class="ft-ci">
+        <span>
+          herohrservices@gmail.com
+        </span>
       </div>
 
     </div>
+
 
   </div>
 
@@ -1899,7 +2505,8 @@ footer {
   <div class="ft-bottom">
 
     <span class="ft-copy">
-      © 2026 H.E.R.O. HR SERVICES. All rights reserved.
+      © 2026 H.E.R.O. HR SERVICES.
+      All rights reserved.
     </span>
 
     <span class="ft-motto">
@@ -1913,29 +2520,45 @@ footer {
 </div>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- ==================================================
+     SERVICES
+================================================== -->
 
 <div id="pg-services" class="pg">
 
+
 <section class="svc-head">
+
 
   <div class="svc-head-inner">
 
+
     <div class="eb">
+
       <span class="eb-line"></span>
+
       Our Services
+
     </div>
 
+
     <h1 class="sh2 sh2-lt">
+
       Solutions for the<br>
+
       <em>whole organization.</em>
+
     </h1>
 
+
     <p class="sp sp-lt">
+
       From leadership development to organizational culture,
       H.E.R.O. HR SERVICES provides practical solutions designed
       around your organization's specific needs.
+
     </p>
+
 
   </div>
 
@@ -1944,18 +2567,23 @@ footer {
 
 <div class="svc-list">
 
+
   <div class="svc-item">
 
-    <div class="svc-num">01</div>
+    <div class="svc-num">
+      01
+    </div>
 
     <div class="svc-title">
       Organizational Development Strategy
     </div>
 
     <div class="svc-desc">
+
       Assess organizational needs, identify opportunities,
       and develop strategic plans that align people,
       processes, and business objectives.
+
     </div>
 
   </div>
@@ -1963,15 +2591,19 @@ footer {
 
   <div class="svc-item">
 
-    <div class="svc-num">02</div>
+    <div class="svc-num">
+      02
+    </div>
 
     <div class="svc-title">
       Leadership Development
     </div>
 
     <div class="svc-desc">
+
       Equip leaders with the skills, tools, and confidence
       needed to lead effectively and develop high-performing teams.
+
     </div>
 
   </div>
@@ -1979,15 +2611,19 @@ footer {
 
   <div class="svc-item">
 
-    <div class="svc-num">03</div>
+    <div class="svc-num">
+      03
+    </div>
 
     <div class="svc-title">
       Team Effectiveness
     </div>
 
     <div class="svc-desc">
+
       Improve communication, collaboration, accountability,
       trust, and team performance.
+
     </div>
 
   </div>
@@ -1995,15 +2631,19 @@ footer {
 
   <div class="svc-item">
 
-    <div class="svc-num">04</div>
+    <div class="svc-num">
+      04
+    </div>
 
     <div class="svc-title">
       Change Management
     </div>
 
     <div class="svc-desc">
+
       Help organizations navigate change while maintaining
       engagement, communication, and organizational momentum.
+
     </div>
 
   </div>
@@ -2011,16 +2651,20 @@ footer {
 
   <div class="svc-item">
 
-    <div class="svc-num">05</div>
+    <div class="svc-num">
+      05
+    </div>
 
     <div class="svc-title">
       Culture Assessment & Enhancement
     </div>
 
     <div class="svc-desc">
+
       Understand organizational culture and create strategies
       that strengthen engagement, inclusion, communication,
       and workplace effectiveness.
+
     </div>
 
   </div>
@@ -2028,42 +2672,59 @@ footer {
 
   <div class="svc-item">
 
-    <div class="svc-num">06</div>
+    <div class="svc-num">
+      06
+    </div>
 
     <div class="svc-title">
       Learning & Development
     </div>
 
     <div class="svc-desc">
+
       Design development programs that build employee capability,
       support career growth, and strengthen organizational talent.
+
     </div>
 
   </div>
+
 
 </div>
 
 
 <section class="sec sec-cr">
 
+
   <div class="why-grid">
+
 
     <div>
 
       <div class="eb">
+
         <span class="eb-line"></span>
+
         Why H.E.R.O.
+
       </div>
 
+
       <h2 class="sh2 sh2-dk">
+
         Strategy that<br>
+
         <em>moves people forward.</em>
+
       </h2>
 
+
       <p class="sp">
+
         We work alongside your organization to understand what
         is happening, why it is happening, and what can be done
         to create meaningful improvement.
+
       </p>
 
     </div>
@@ -2071,17 +2732,24 @@ footer {
 
     <div class="why-list">
 
+
       <div class="why-row">
 
         <div class="why-chk">
+
           <svg viewBox="0 0 24 24">
+
             <polyline points="20 6 9 17 4 12"/>
+
           </svg>
+
         </div>
 
         <p class="why-txt">
+
           Strategic, practical, and fully tailored solutions —
           no cookie-cutter playbooks.
+
         </p>
 
       </div>
@@ -2090,14 +2758,20 @@ footer {
       <div class="why-row">
 
         <div class="why-chk">
+
           <svg viewBox="0 0 24 24">
+
             <polyline points="20 6 9 17 4 12"/>
+
           </svg>
+
         </div>
 
         <p class="why-txt">
+
           Collaborative approach that builds internal capability —
           your team owns the outcome.
+
         </p>
 
       </div>
@@ -2106,14 +2780,20 @@ footer {
       <div class="why-row">
 
         <div class="why-chk">
+
           <svg viewBox="0 0 24 24">
+
             <polyline points="20 6 9 17 4 12"/>
+
           </svg>
+
         </div>
 
         <p class="why-txt">
+
           Measurable impact through clear goals, progress tracking,
           and honest reporting.
+
         </p>
 
       </div>
@@ -2122,17 +2802,24 @@ footer {
       <div class="why-row">
 
         <div class="why-chk">
+
           <svg viewBox="0 0 24 24">
+
             <polyline points="20 6 9 17 4 12"/>
+
           </svg>
+
         </div>
 
         <p class="why-txt">
+
           Deeply passionate about people, purpose, and progress
           at every level.
+
         </p>
 
       </div>
+
 
     </div>
 
@@ -2143,22 +2830,34 @@ footer {
 
 <div class="cta-band">
 
+
   <div>
 
     <h2 class="cta-h">
+
       Not sure where to start?<br>
+
       <em>Let's figure it out together.</em>
+
     </h2>
 
+
     <p class="cta-sub">
+
       Every engagement begins with a conversation.
+
     </p>
 
   </div>
 
-  <button class="btn-g" onclick="go('contact')">
+
+  <button
+    class="btn-g"
+    onclick="go('contact')"
+  >
     Schedule a Consultation
   </button>
+
 
 </div>
 
@@ -2166,6 +2865,7 @@ footer {
 <footer>
 
   <div class="ft-grid">
+
 
     <div>
 
@@ -2190,11 +2890,25 @@ footer {
         Navigate
       </div>
 
+
       <div class="ft-links">
-        <button onclick="go('home')">Home</button>
-        <button onclick="go('about')">About</button>
-        <button onclick="go('services')">Services</button>
-        <button onclick="go('contact')">Contact</button>
+
+        <button onclick="go('home')">
+          Home
+        </button>
+
+        <button onclick="go('about')">
+          About
+        </button>
+
+        <button onclick="go('services')">
+          Services
+        </button>
+
+        <button onclick="go('contact')">
+          Contact
+        </button>
+
       </div>
 
     </div>
@@ -2206,15 +2920,26 @@ footer {
         Contact
       </div>
 
-      <div class="ft-ci">
-        <span>(478) 357-3164</span>
-      </div>
 
       <div class="ft-ci">
-        <span>herohrservices@gmail.com</span>
+
+        <span>
+          (478) 357-3164
+        </span>
+
+      </div>
+
+
+      <div class="ft-ci">
+
+        <span>
+          herohrservices@gmail.com
+        </span>
+
       </div>
 
     </div>
+
 
   </div>
 
@@ -2222,8 +2947,12 @@ footer {
   <div class="ft-bottom">
 
     <span class="ft-copy">
-      © 2026 H.E.R.O. HR SERVICES. All rights reserved.
+
+      © 2026 H.E.R.O. HR SERVICES.
+      All rights reserved.
+
     </span>
+
 
     <span class="ft-motto">
       Helping Every Role Optimize
@@ -2236,327 +2965,212 @@ footer {
 </div>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- ==================================================
+     CONTACT
+================================================== -->
 
 <div id="pg-contact" class="pg">
 
+
 <section class="ct-top">
+
 
   <div class="ct-left">
 
+
     <div class="eb">
+
       <span class="eb-line"></span>
-      Get In Touch
+
+      Contact
+
+      <span class="eb-line"></span>
+
     </div>
 
+
     <h1 class="ct-h">
+
       Let's build what's<br>
+
       next — <em>together.</em>
+
     </h1>
 
+
     <p class="ct-p">
+
       Whether you have a clear challenge in mind or just know
       something needs to change, H.E.R.O. HR SERVICES is here
       to help. Reach out and let's start the conversation.
+
     </p>
 
 
     <div class="ct-details">
 
-      <div class="ct-di">
 
-        <div class="ct-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
-            19.79 19.79 0 0 1-8.63-3.07
-            A19.5 19.5 0 0 1 4.69 12
-            19.79 19.79 0 0 1 1.58 3.44
-            2 2 0 0 1 3.55 1.25h3a2 2
-            0 0 1 2 1.72c.127.96.361
-            1.903.7 2.81a2 2 0 0 1-.45
-            2.11L7.91 8.81a16 16 0 0 0
-            6.29 6.29l.87-.87a2 2 0 0
-            1 2.11-.45c.907.339 1.85.573
-            2.81.7A2 2 0 0 1 21.73 16.92z"/>
-          </svg>
-        </div>
-
-        <div>
-          <div class="ct-dl">Phone</div>
-          <div class="ct-dv">(478) 357-3164</div>
-        </div>
-
-      </div>
-
+      <!-- PHONE -->
 
       <div class="ct-di">
+
 
         <div class="ct-icon">
 
           <svg viewBox="0 0 24 24">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12
-            c0 1.1-.9 2-2 2H4c-1.1
-            0-2-.9-2-2V6c0-1.1.9-2
-            2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
+
+            <path d="
+              M22 16.92v3a2 2 0 0 1-2.18 2
+              19.79 19.79 0 0 1-8.63-3.07
+              A19.5 19.5 0 0 1 4.69 12
+              19.79 19.79 0 0 1 1.58 3.44
+              2 2 0 0 1 3.55 1.25h3a2 2
+              0 0 1 2 1.72c.127.96.361
+              1.903.7 2.81a2 2 0 0 1-.45
+              2.11L7.91 8.81a16 16 0 0 0
+              6.29 6.29l.87-.87a2 2 0 0
+              1 2.11-.45c.907.339 1.85.573
+              2.81.7A2 2 0 0 1 21.73 16.92z"
+            />
+
           </svg>
 
         </div>
 
+
         <div>
-          <div class="ct-dl">Email</div>
-          <div class="ct-dv">
-            herohrservices@gmail.com
+
+          <div class="ct-dl">
+            Phone
           </div>
+
+          <div class="ct-dv">
+            (478) 357-3164
+          </div>
+
         </div>
+
 
       </div>
 
 
+      <!-- EMAIL -->
+
       <div class="ct-di">
+
 
         <div class="ct-icon">
 
           <svg viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 0 1
-            4 10 15.3 15.3 0 0 1-4 10
-            15.3 15.3 0 0 1-4-10
-            15.3 15.3 0 0 1 4-10z"/>
+
+            <path d="
+              M4 4h16c1.1 0 2 .9 2 2v12
+              c0 1.1-.9 2-2 2H4c-1.1
+              0-2-.9-2-2V6c0-1.1.9-2
+              2-2z"
+            />
+
+            <polyline points="22,6 12,13 2,6"/>
+
           </svg>
 
         </div>
 
+
         <div>
-          <div class="ct-dl">Website</div>
+
+          <div class="ct-dl">
+            Email
+          </div>
+
+          <div class="ct-dv">
+
+            <a
+              href="mailto:herohrservices@gmail.com"
+              style="color:inherit;"
+            >
+              herohrservices@gmail.com
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- WEBSITE -->
+
+      <div class="ct-di">
+
+
+        <div class="ct-icon">
+
+          <svg viewBox="0 0 24 24">
+
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+
+            <line
+              x1="2"
+              y1="12"
+              x2="22"
+              y2="12"
+            />
+
+            <path d="
+              M12 2a15.3 15.3 0 0 1
+              4 10 15.3 15.3 0 0 1-4 10
+              15.3 15.3 0 0 1-4-10
+              15.3 15.3 0 0 1 4-10z"
+            />
+
+          </svg>
+
+        </div>
+
+
+        <div>
+
+          <div class="ct-dl">
+            Website
+          </div>
+
           <div class="ct-dv">
             H.E.R.O. HR SERVICES
           </div>
+
         </div>
 
+
       </div>
+
 
     </div>
 
   </div>
 
-
-  <div class="ct-form-wrap">
-
-    <div class="ct-form-h">
-      Send a Message
-    </div>
-
-    <form
-      id="cform"
-      action="https://formspree.io/f/myezyeyw"
-      method="POST"
-    >
-
-      <input
-        type="hidden"
-        name="_subject"
-        value="New H.E.R.O. HR SERVICES consultation request"
-      />
-
-      <input
-        type="text"
-        name="_gotcha"
-        style="display:none"
-        tabindex="-1"
-        autocomplete="off"
-      />
-
-
-      <div class="fg">
-
-        <div class="fi">
-
-          <label class="fl">
-            First Name
-          </label>
-
-          <input
-            class="finput"
-            type="text"
-            name="first_name"
-            placeholder="Jane"
-            required
-          />
-
-        </div>
-
-
-        <div class="fi">
-
-          <label class="fl">
-            Last Name
-          </label>
-
-          <input
-            class="finput"
-            type="text"
-            name="last_name"
-            placeholder="Smith"
-            required
-          />
-
-        </div>
-
-
-        <div class="fi">
-
-          <label class="fl">
-            Email
-          </label>
-
-          <input
-            class="finput"
-            type="email"
-            name="email"
-            placeholder="jane@yourorg.com"
-            required
-          />
-
-        </div>
-
-
-        <div class="fi">
-
-          <label class="fl">
-            Phone
-          </label>
-
-          <input
-            class="finput"
-            type="tel"
-            name="phone"
-            placeholder="(555) 000-0000"
-          />
-
-        </div>
-
-
-        <div class="fi full">
-
-          <label class="fl">
-            Organization
-          </label>
-
-          <input
-            class="finput"
-            type="text"
-            name="organization"
-            placeholder="Your organization name"
-          />
-
-        </div>
-
-
-        <div class="fi full">
-
-          <label class="fl">
-            Service of Interest
-          </label>
-
-          <select
-            class="fsel"
-            name="service"
-          >
-
-            <option value="">
-              Select a service...
-            </option>
-
-            <option>
-              Organizational Development Strategy
-            </option>
-
-            <option>
-              Leadership Development
-            </option>
-
-            <option>
-              Team Effectiveness
-            </option>
-
-            <option>
-              Change Management
-            </option>
-
-            <option>
-              Culture Assessment & Enhancement
-            </option>
-
-            <option>
-              Learning & Development
-            </option>
-
-            <option>
-              Not sure yet — let's talk
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="fi full">
-
-          <label class="fl">
-            Tell Us About Your Challenge
-          </label>
-
-          <textarea
-            class="ftxt"
-            name="message"
-            placeholder="Share what's on your mind — what's working, what isn't, or where you want to go..."
-          ></textarea>
-
-        </div>
-
-      </div>
-
-
-      <button
-        type="submit"
-        class="fsub"
-      >
-        Send Message →
-      </button>
-
-    </form>
-
-
-    <div class="f-ok" id="fok">
-
-      ✓ Message received!
-
-      <br>
-
-      <span style="
-        font-size:15px;
-        color:var(--muted);
-        font-style:normal;
-        font-family:var(--fb);
-      ">
-        Our team will be in touch shortly.
-      </span>
-
-    </div>
-
-  </div>
 
 </section>
 
 
+<!-- ==================================================
+     WHO WE SERVE
+================================================== -->
+
 <section class="who-band">
+
 
   <div class="eb">
 
     <span class="eb-line"></span>
+
     Who We Serve
+
     <span class="eb-line"></span>
 
   </div>
@@ -2565,6 +3179,7 @@ footer {
   <h2 class="sh2 sh2-dk">
 
     Wherever you are,<br>
+
     <em>we meet you there.</em>
 
   </h2>
@@ -2580,30 +3195,71 @@ footer {
 
   <div class="who-grid">
 
-    <div class="who-card">
-      <div class="who-code">SMB</div>
-      <div class="who-lbl">Small Business</div>
-    </div>
 
     <div class="who-card">
-      <div class="who-code">Mid</div>
-      <div class="who-lbl">Mid-Size Companies</div>
+
+      <div class="who-code">
+        SMB
+      </div>
+
+      <div class="who-lbl">
+        Small Business
+      </div>
+
     </div>
 
-    <div class="who-card">
-      <div class="who-code">ENT</div>
-      <div class="who-lbl">Large Enterprises</div>
-    </div>
 
     <div class="who-card">
-      <div class="who-code">NPO</div>
-      <div class="who-lbl">Nonprofits</div>
+
+      <div class="who-code">
+        Mid
+      </div>
+
+      <div class="who-lbl">
+        Mid-Size Companies
+      </div>
+
     </div>
 
+
     <div class="who-card">
-      <div class="who-code">GOV</div>
-      <div class="who-lbl">Government & Public</div>
+
+      <div class="who-code">
+        ENT
+      </div>
+
+      <div class="who-lbl">
+        Large Enterprises
+      </div>
+
     </div>
+
+
+    <div class="who-card">
+
+      <div class="who-code">
+        NPO
+      </div>
+
+      <div class="who-lbl">
+        Nonprofits
+      </div>
+
+    </div>
+
+
+    <div class="who-card">
+
+      <div class="who-code">
+        GOV
+      </div>
+
+      <div class="who-lbl">
+        Government & Public
+      </div>
+
+    </div>
+
 
   </div>
 
@@ -2612,7 +3268,9 @@ footer {
 
 <footer>
 
+
   <div class="ft-grid">
+
 
     <div>
 
@@ -2637,12 +3295,24 @@ footer {
         Navigate
       </div>
 
+
       <div class="ft-links">
 
-        <button onclick="go('home')">Home</button>
-        <button onclick="go('about')">About</button>
-        <button onclick="go('services')">Services</button>
-        <button onclick="go('contact')">Contact</button>
+        <button onclick="go('home')">
+          Home
+        </button>
+
+        <button onclick="go('about')">
+          About
+        </button>
+
+        <button onclick="go('services')">
+          Services
+        </button>
+
+        <button onclick="go('contact')">
+          Contact
+        </button>
 
       </div>
 
@@ -2655,15 +3325,26 @@ footer {
         Contact
       </div>
 
-      <div class="ft-ci">
-        <span>(478) 357-3164</span>
-      </div>
 
       <div class="ft-ci">
-        <span>herohrservices@gmail.com</span>
+
+        <span>
+          (478) 357-3164
+        </span>
+
+      </div>
+
+
+      <div class="ft-ci">
+
+        <span>
+          herohrservices@gmail.com
+        </span>
+
       </div>
 
     </div>
+
 
   </div>
 
@@ -2671,31 +3352,42 @@ footer {
   <div class="ft-bottom">
 
     <span class="ft-copy">
-      © 2026 H.E.R.O. HR SERVICES. All rights reserved.
+
+      © 2026 H.E.R.O. HR SERVICES.
+      All rights reserved.
+
     </span>
 
+
     <span class="ft-motto">
+
       Helping Every Role Optimize
+
     </span>
 
   </div>
+
 
 </footer>
 
 </div>
 
 
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
 <script>
-
-const CONTACT_EMAIL = 'herohrservices@gmail.com';
-
 
 function toggleMenu() {
 
-  const menu = document.querySelector('.nl');
+  const menu =
+    document.querySelector('.nl');
 
   if (menu) {
+
     menu.classList.toggle('open');
+
   }
 
 }
@@ -2703,38 +3395,77 @@ function toggleMenu() {
 
 function go(page) {
 
+  /*
+   * Hide all pages
+   */
+
   document
     .querySelectorAll('.pg')
-    .forEach(p => p.classList.remove('on'));
+    .forEach(function(pageElement) {
+
+      pageElement.classList.remove('on');
+
+    });
+
+
+  /*
+   * Remove active navigation state
+   */
 
   document
     .querySelectorAll('.nl button')
-    .forEach(b => b.classList.remove('active'));
+    .forEach(function(button) {
+
+      button.classList.remove('active');
+
+    });
 
 
-  const pageEl =
+  /*
+   * Show selected page
+   */
+
+  const pageElement =
     document.getElementById('pg-' + page);
 
-  const navBtn =
+  if (pageElement) {
+
+    pageElement.classList.add('on');
+
+  }
+
+
+  /*
+   * Highlight selected navigation item
+   */
+
+  const navButton =
     document.getElementById('n-' + page);
 
+  if (navButton) {
 
-  if (pageEl) {
-    pageEl.classList.add('on');
+    navButton.classList.add('active');
+
   }
 
-  if (navBtn) {
-    navBtn.classList.add('active');
-  }
 
+  /*
+   * Close mobile menu
+   */
 
   const menu =
     document.querySelector('.nl');
 
   if (menu) {
+
     menu.classList.remove('open');
+
   }
 
+
+  /*
+   * Return to top of page
+   */
 
   window.scrollTo({
     top: 0,
@@ -2744,62 +3475,9 @@ function go(page) {
 }
 
 
-document
-  .getElementById('cform')
-  .addEventListener('submit', async function(event) {
-
-    event.preventDefault();
-
-    const form = event.target;
-    const submitButton =
-      form.querySelector('.fsub');
-
-    submitButton.disabled = true;
-    submitButton.textContent = 'Sending...';
-
-
-    try {
-
-      const response =
-        await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-
-      if (response.ok) {
-
-        form.style.display = 'none';
-
-        document
-          .getElementById('fok')
-          .style.display = 'block';
-
-      } else {
-
-        throw new Error(
-          'Form submission failed.'
-        );
-
-      }
-
-    } catch (error) {
-
-      submitButton.disabled = false;
-      submitButton.textContent =
-        'Send Message →';
-
-      alert(
-        'There was a problem sending your message. Please email herohrservices@gmail.com directly.'
-      );
-
-    }
-
-  });
-
+/*
+ * Close mobile navigation with Escape
+ */
 
 document.addEventListener(
   'keydown',
@@ -2811,7 +3489,9 @@ document.addEventListener(
         document.querySelector('.nl');
 
       if (menu) {
+
         menu.classList.remove('open');
+
       }
 
     }
@@ -2820,6 +3500,7 @@ document.addEventListener(
 );
 
 </script>
+
 
 </body>
 </html>
